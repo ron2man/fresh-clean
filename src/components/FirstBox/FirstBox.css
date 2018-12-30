@@ -1,0 +1,27 @@
+.first-box {
+    background-image: url('rehab.png');
+    background-size: cover;
+    height: 180px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .first-box h2 {
+    font-size: 1.1em;
+    padding: 5px 10px;
+    color: white;
+    text-transform: capitalize;
+  }
+  
+  .using-app{
+    text-align: center;
+    color:white;
+    font-weight: 700;
+    position: absolute;
+    bottom: 15px;
+    left:10px;
+  }
+  
+  .red{
+    color: red;
+  }

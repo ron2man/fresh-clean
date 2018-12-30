@@ -1,32 +1,92 @@
-.App {
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+body {
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px #ccc solid;
+}
+
+header {
+  padding: 0 35px;
+  height: 45px;
+}
+
+header h1 {
+  font-weight: 700;
+}
+
+header i {
+  color: blue;
+}
+
+.boxes {
+  padding: 0 15px;
+}
+
+.box {
+  border-radius: 10px;
+}
+
+
+
+
+
+
+footer {
+  height: 60px;
+  border-top: 1px #ccc solid;
+  margin-top: auto;
+  padding: 5px 15px;
+
+}
+
+footer .app-button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+footer .app-button svg {
+  font-size: 1.5rem;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-button.active {
+  color: lightskyblue;
 }

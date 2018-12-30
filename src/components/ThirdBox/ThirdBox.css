@@ -1,0 +1,24 @@
+.third-box {
+    height: 185px;
+    background-color: rgba(8, 70, 150, 0.103);
+    background-image: url('https://www.prosek.com/Customer-Content/www/CMS/files/blog/Quote.png');
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: 90% 70%;
+  }
+  .third-box .arrow{
+    font-size: 2em;
+    padding: 0 5px;
+  }
+  .third-box .content{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 2rem;
+  justify-content: space-between;
+  }
+
+  .content .by{
+font-weight: bold;
+  }

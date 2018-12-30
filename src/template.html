@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="flex space-between align-items-center">
+            <h1 class="logo">So Fresh So Clean</h1>
+            <i class="fas fa-ellipsis-v"></i>
+            <!-- <h1 class="logo">SmartThings</h1> -->
+        </header>
+        <div class="boxes">
+            <div class="box first-box">
+                <h2>Keep the good work. </h2>
+                <h2>we <span style="color:red;">♥</span> you. you're not alone.</h2>
+                <p class="using-app">151 using the app</p>
+            </div>
+            <div class="box second-box flex space-evenly align-items-center">
+                <!-- <div class="time">
+                    <p class="digit">12</p>
+                    <p>years</p>
+                </div>
+                <div class="time">
+                        <p class="digit">10</p>
+                        <p>months</p>
+                </div> -->
+                <div class="time">
+                        <p class="digit">11</p>
+                        <p>days</p>
+                </div>
+                <div class="time">
+                        <p class="digit">01</p>
+                        <p>hours</p>
+                </div>
+                <div class="time">
+                        <p class="digit">12</p>
+                        <p>minutes</p>
+                </div>
+                <div class="time">
+                        <p class="digit">10</p>
+                        <p>seconds</p>
+                </div>
+            </div>
+            <div class="box third-box flex space-between align-items-center">
+                
+                <div class="arrow"><i class="fas fa-chevron-circle-left"></i></div>
+                <div class="content">
+                    <p>with self-discipline most anything is possible. thedore roosevelt</p>
+                    <!-- <p>we don't have to be smarter than the rest; we have to be more disciplined than the rest. warren buffett</p> -->
+                    <!-- <p>discipline is the bridge between goals and accomplishments</p> -->
+                    <!-- <p>suffer the pain of discipline<br> or<br> suffer the pain of regret</p> -->
+                </div>
+                <div class="arrow"><i class="fas fa-chevron-circle-right"></i></div>
+            </div>
+        </div>
+        <footer class="flex space-around align-items-center">
+            <div class="app-button active"><i class="fas fa-atom"></i>אוטומציות</div>
+            <div class="app-button"><i class="fas fa-mobile-alt"></i>מכשירים</div>
+            <div class="app-button"><i class="fas fa-table"></i>לוח מחוונים</div>
+        </footer>
+    </div>
+
+    <style>
+        body {
+            font-size: 16px;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .space-evenly {
+            justify-content: space-evenly;
+        }
+
+        .space-around {
+            justify-content: space-around;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+        .align-items-end {
+            align-items: flex-end;
+        }
+
+
+        .app-container {
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            height: 640px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border: 1px #ccc solid;
+        }
+
+        header {
+            padding: 0 35px;
+            height: 45px;
+        }
+
+        header h1 {
+            font-weight: 700;
+        }
+
+        header i {
+            color: blue;
+        }
+
+        .boxes {
+            padding: 0 15px;
+        }
+
+        .box {
+            border-radius: 10px;
+        }
+
+        .first-box {
+            background-image: url('rehab.png');
+            background-size: cover;
+            height: 180px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .first-box h2 {
+            font-size: 1.1em;
+            padding: 5px 10px;
+            color: white;
+            text-transform: capitalize;
+        }
+
+        .using-app{
+            text-align: center;
+            color:white;
+            font-weight: 700;
+            position: absolute;
+            bottom: 15px;
+            left:10px;
+        }
+
+        .second-box {
+            height: 90px;
+            background-color: rgba(148, 77, 106, 0.048);
+            margin-bottom: 10px;
+        }
+        .second-box .time{
+            font-size:0.8em;
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .time .digit {
+            font-size: 2rem;
+            font-family: 'Libre Baskerville', serif;
+
+        }
+
+        .third-box {
+            height: 185px;
+            background-color: rgba(8, 70, 150, 0.103);
+            background-image: url('https://www.prosek.com/Customer-Content/www/CMS/files/blog/Quote.png');
+            background-size: 10%;
+            background-repeat: no-repeat;
+            background-position: 90% 10%;
+        }
+        .third-box .arrow{
+            font-size: 2em;
+            padding: 0 5px;
+        }
+        .third-box .content{
+            text-transform: capitalize;
+            text-align: center;
+            line-height: 2rem;
+
+        }
+
+        footer {
+            height: 60px;
+            border-top: 1px #ccc solid;
+            margin-top: auto;
+            padding: 5px 15px;
+
+        }
+
+        footer .app-button {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        footer .app-button i {
+            font-size: 2rem;
+        }
+
+        .app-button.active {
+            color: lightskyblue;
+        }
+    </style>
+
+
+</body>
+
+</html>
