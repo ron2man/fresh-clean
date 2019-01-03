@@ -7,25 +7,29 @@ class SecondBox extends React.Component {
     constructor(props) {
         super(props);
         // Don't call this.setState() here!
-        this.state = { timeLeft: {years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 } };
+        this.state = { timeLeft: { years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 } };
     }
     componentDidMount() {
-        setInterval(()=>{
+        setInterval(() => {
             var time = timeLeft(+this.props.date)
-            this.setState({timeLeft: time})
-        },1000)
-        // console.log(+this.props.date)
+            this.setState({ timeLeft: time })
+        }, 1000)
     }
     render() {
         return <div className="box second-box flex space-evenly align-items-center">
-            <div className="time">
-                <p className="digit">{this.state.timeLeft.years}</p>
-                <p>years</p>
-            </div>
-            <div className="time">
-                <p className="digit">{this.state.timeLeft.months}</p>
-                <p>months</p>
-            </div> 
+            {this.state.timeLeft.years > 0 &&
+                <div className="time">
+                    <p className="digit">{this.state.timeLeft.years}</p>
+                    <p>years</p>
+                </div>
+            }
+            {
+                this.state.timeLeft.months > 0 &&
+                <div className="time">
+                    <p className="digit">{this.state.timeLeft.months}</p>
+                    <p>months</p>
+                </div>
+            }
             <div className="time">
                 <p className="digit">{this.state.timeLeft.days}</p>
                 <p>days</p>
