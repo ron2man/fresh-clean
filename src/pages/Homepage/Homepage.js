@@ -7,7 +7,8 @@ class Homepage extends React.Component {
     render() {
         return <div className="boxes">
             <FirstBox  />
-            <SecondBox date="1545894000000"/> {/* 27/12/2018  */}
+            <SecondBox date="1545894000000"/>
+             {/* 27/12/2018  */}
             <ThirdBox />
         </div>;
     }
