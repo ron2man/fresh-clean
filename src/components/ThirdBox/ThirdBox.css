@@ -1,12 +1,9 @@
 .third-box {
     height: 185px;
-    background-color: rgba(8, 70, 150, 0.103);
-    background-image: url('https://www.prosek.com/Customer-Content/www/CMS/files/blog/Quote.png');
-    background-size: 10%;
-    background-repeat: no-repeat;
-    background-position: 90% 70%;
+    background-color: rgba(8, 70, 150, 0.1);
   }
   .third-box .arrow{
+    cursor: pointer;
     font-size: 2em;
     padding: 0 5px;
   }

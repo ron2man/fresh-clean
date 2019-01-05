@@ -3,6 +3,11 @@
     background-color: rgba(148, 77, 106, 0.048);
     margin-bottom: 10px;
   }
+
+  .second-box input{
+    display:none;
+  }
+
   .second-box .time{
     font-size:0.8em;
     display:flex;

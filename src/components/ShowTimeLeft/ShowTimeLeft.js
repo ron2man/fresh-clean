@@ -1,22 +1,29 @@
 import React from 'react';
-import './SecondBox.css'
+import './ShowTimeLeft.css'
 
-
-
-class SecondBox extends React.Component {
+class ShowTimeLeft extends React.Component {
     constructor(props) {
         super(props);
         // Don't call this.setState() here!
-        this.state = { timeLeft: { years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 } };
+        this.state = {
+            timeLeft: { years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0 },
+        };
     }
+
+
     componentDidMount() {
-        setInterval(() => {
+        this.interval = setInterval(() => {
             var time = timeLeft(+this.props.date)
             this.setState({ timeLeft: time })
         }, 1000)
     }
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+
     render() {
-        return <div className="box second-box flex space-evenly align-items-center">
+        return <div className="box second-box flex space-evenly align-items-center" >
             {this.state.timeLeft.years > 0 &&
                 <div className="time">
                     <p className="digit">{this.state.timeLeft.years}</p>
@@ -50,7 +57,7 @@ class SecondBox extends React.Component {
     }
 }
 
-export default SecondBox;
+export default ShowTimeLeft;
 
 
 function timeLeft(dateTimestamp) {

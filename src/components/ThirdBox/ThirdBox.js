@@ -2,18 +2,7 @@ import React from 'react';
 import './ThirdBox.css'
 import { faChevronCircleLeft, faChevronCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
-// TODO: build function - that return the next cell of array every call
-
-const quotes = [
-    { quote: 'with self-discipline most anything is possible.', by: 'thedore roosevelt' },
-    { quote: `we don't have to be smarter than the rest; we have to be more disciplined than the rest.`, by: 'warren buffett' },
-    { quote: `discipline is the bridge between goals and accomplishments`, by: '' },
-    { quote: `suffer the pain of discipline or suffer the pain of regret`, by: '' }
-];
-
-
+import PropTypes from 'prop-types';
 
 class ThirdBox extends React.Component {
     constructor(props) {
@@ -27,12 +16,12 @@ class ThirdBox extends React.Component {
     prevQuote() {
         let idx = this.state.index;
         if (idx - 1 > 0) this.setState({ index: idx - 1 })
-        else this.setState({ index: quotes.length - 1 })
+        else this.setState({ index: this.props.quotes.length - 1 })
     }
 
     nextQuote() {
         let idx = this.state.index;
-        if (idx + 1 < quotes.length) this.setState({ index: idx + 1 })
+        if (idx + 1 < this.props.quotes.length) this.setState({ index: idx + 1 })
         else this.setState({ index: 0 })
     }
 
@@ -41,8 +30,8 @@ class ThirdBox extends React.Component {
 
             <div className="arrow" onClick={this.prevQuote}><FontAwesomeIcon icon={faChevronCircleLeft} /></div>
             <div className="content">
-                <p className="quote">{quotes[this.state.index].quote}</p>
-                <p className="by">{quotes[this.state.index].by}</p>
+                <p className="quote">{this.props.quotes[this.state.index].quote}</p>
+                <p className="by">{this.props.quotes[this.state.index].by}</p>
             </div>
             <div className="arrow" onClick={this.nextQuote} ><FontAwesomeIcon icon={faChevronCircleRight} /></div>
         </div>;
@@ -50,3 +39,7 @@ class ThirdBox extends React.Component {
 }
 
 export default ThirdBox;
+
+ThirdBox.propTypes = {
+    quotes: PropTypes.array,
+};

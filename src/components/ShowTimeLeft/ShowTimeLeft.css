@@ -1,0 +1,22 @@
+.second-box {
+    height: 90px;
+    background-color: rgba(148, 77, 106, 0.048);
+    margin-bottom: 10px;
+  }
+
+  .second-box input{
+    display:none;
+  }
+
+  .second-box .time{
+    font-size:0.8em;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .time .digit {
+    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+  
+  }
