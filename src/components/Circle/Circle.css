@@ -5,21 +5,30 @@ circle {
     transform-origin: 50% 50%;
 }
 
-svg{
-    margin: 0 auto;
+.counter-container{
+    width: 100%;
+    height: 360px;
+    position: relative;
+}
+
+svg, .counter{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
-  .counter{
-      position: relative;
-      text-align: center;
-      font-size:3em;
-      width:100%;
-      z-index: 2;
+  svg circle {
+      margin: 0 auto;
   }
-
-  .counter p{
-      position: absolute;
-    top:160px;
-    left: 160px;
-    z-index:4;
+  .counter-container .counter {
+      font-size:40px;
+      
+      z-index: 3;
     }
+              .counter-container .counter p{
+      margin: auto;
+              
+            }
+
