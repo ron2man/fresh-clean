@@ -22,12 +22,12 @@ class ProgressRing extends React.Component {
           width={radius * 2}
          >
           <circle
-            stroke="white"
+            stroke="black"
             fill="transparent"
             strokeWidth={ stroke }
             strokeDasharray={ this.circumference + ' ' + this.circumference }
             style={ { strokeDashoffset } }
-            stroke-width={ stroke }
+            // stroke-width={ stroke }
             r={ this.normalizedRadius }
             cx={ radius }
             cy={ radius }
@@ -47,24 +47,32 @@ class ProgressRing extends React.Component {
     }
     
     componentDidMount() {
-      // emulating progress
       const interval = setInterval(() => {
-        this.setState({ progress: this.state.progress + 10 });
+        this.setState({ progress: this.state.progress + 0.125 });
         if (this.state.progress === 100)
           clearInterval(interval);
-      }, 1000);
+      }, 75);
     }
+    // componentDidMount() {
+    //   const interval = setInterval(() => {
+    //     this.setState({ progress: this.state.progress + 0.25 });
+    //     if (this.state.progress === 100)
+    //       clearInterval(interval);
+    //   }, 150);
+    // }
     
     render() {
       return (
-        <ProgressRing
-          radius={ 60 }
-          stroke={ 4 }
-          progress={ this.state.progress }
-        />
+          <div>
+              <div className="counter"><p>50</p></div>
+              <ProgressRing
+                radius={ 160 }
+                stroke={ 10 }
+                progress={ this.state.progress }
+              />
+          </div>
       );
     }
   }
   
-//   export default ProgressRing
-  export default  Example
+export default Example

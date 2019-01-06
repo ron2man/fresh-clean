@@ -3,4 +3,23 @@ circle {
     transition: stroke-dashoffset 0.35s;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
+}
+
+svg{
+    margin: 0 auto;
   }
+
+  .counter{
+      position: relative;
+      text-align: center;
+      font-size:3em;
+      width:100%;
+      z-index: 2;
+  }
+
+  .counter p{
+      position: absolute;
+    top:160px;
+    left: 160px;
+    z-index:4;
+    }

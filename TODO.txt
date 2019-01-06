@@ -3,3 +3,7 @@ React -
 https://codepen.io/jeremenichelli/pen/gGWPme
 CSS
 https://css-tricks.com/building-progress-ring-quickly/
+
+100 => 60sec
+10 => 6sec
+1 => 0.6
