@@ -37,15 +37,13 @@ class ProgressRing extends React.Component {
             {Math.floor(this.props.progress / 1.667)}
           </text>
         }
-          {this.props.progress === 100 &&
+        {this.props.progress === 100 &&
           <text x="50%" y="50%" textAnchor="middle" fontSize="36">
             Done
           </text>
         }
-
-
-
       </svg>
+
     );
   }
 }
@@ -57,14 +55,24 @@ class Example extends React.Component {
     this.state = {
       progress: 0
     };
+
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
-    const interval = setInterval(() => {
+    this.interval = setInterval(() => {
       this.setState({ progress: this.state.progress + 0.125 });
       if (this.state.progress === 100)
-        clearInterval(interval);
+        clearInterval(this.interval);
     }, 75);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  handleClick() {
+    this.setState({ progress: 0 })
   }
   // componentDidMount() {
   //   const interval = setInterval(() => {
@@ -83,6 +91,8 @@ class Example extends React.Component {
           stroke={10}
           progress={this.state.progress}
         />
+        <button onClick={this.handleClick}>Start</button>
+
       </div>
     );
   }

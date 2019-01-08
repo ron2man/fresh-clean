@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
+import { Switch, Route, Link } from 'react-router-dom'
+
+import Homepage from './pages/Homepage/Homepage'
+import Minute from './pages/Minute/Minute'
+
+// Font Awsome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV, faCircle, faCommentDots } from '@fortawesome/free-solid-svg-icons'
-import Homepage from './pages/Homepage/Homepage'
+
+
 import './App.css';
 
 library.add(faEllipsisV, faCircle, faCommentDots)
+
+const Main = () => (
+  <main>
+
+    <Switch>
+      <Route exact path='/' component={Homepage} />
+      {/* both /roster and /roster/:number begin with /roster */}
+      <Route path='/minute' component={Minute} />
+      <Route path='/schedule' component={Homepage} />
+    </Switch>
+  </main>
+)
+
 
 
 function Header() {
@@ -15,27 +35,23 @@ function Header() {
   </header>
 }
 
-
-
-
-
-
-
-
 function Footer() {
   return <footer className="flex space-around align-items-center">
-    <div className="app-button active"><FontAwesomeIcon icon={faCircle} /> אוטומציות</div>
-    <div className="app-button"><FontAwesomeIcon icon={faCommentDots} />מכשירים</div>
+    <Link to='/'><div className="app-button active"><FontAwesomeIcon icon={faCircle} />בית</div></Link>
+    <Link to='/minute'><div className="app-button"><FontAwesomeIcon icon={faCommentDots} />קח דקה</div></Link>
     <div className="app-button"><FontAwesomeIcon icon={faCommentDots} />לוח מחוונים</div>
   </footer>;
 }
+
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="app-container">
         <Header />
-        <Homepage />
+        <Main />
         <Footer />
       </div>
     );
