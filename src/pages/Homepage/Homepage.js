@@ -10,12 +10,12 @@ import Example from '../../components/Circle/Circle.js'
 class Homepage extends React.Component {
     render() {
         return <div className="boxes">
-            <FirstBox />
-            <ShowTimeLeft date="1545894000000" />
+            {/* <FirstBox /> */}
+            {/* <ShowTimeLeft date="1545894000000" /> */}
             {/* 27/12/2018  */}
-            <SelectDate />
+            {/* <SelectDate /> */}
             <Example />
-            <ThirdBox quotes={quotes} />
+            {/* <ThirdBox quotes={quotes} /> */}
         </div>;
     }
 }

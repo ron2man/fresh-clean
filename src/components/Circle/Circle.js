@@ -31,7 +31,20 @@ class ProgressRing extends React.Component {
           r={this.normalizedRadius}
           cx={radius}
           cy={radius}
-        />
+        />`
+          {this.props.progress < 100 &&
+          <text x="50%" y="50%" textAnchor="middle" fontSize="36">
+            {Math.floor(this.props.progress / 1.667)}
+          </text>
+        }
+          {this.props.progress === 100 &&
+          <text x="50%" y="50%" textAnchor="middle" fontSize="36">
+            Done
+          </text>
+        }
+
+
+
       </svg>
     );
   }
@@ -55,24 +68,21 @@ class Example extends React.Component {
   }
   // componentDidMount() {
   //   const interval = setInterval(() => {
-  //     this.setState({ progress: this.state.progress + 0.25 });
+  //     this.setState({ progress: this.state.progress + 0.125 });
   //     if (this.state.progress === 100)
   //       clearInterval(interval);
-  //   }, 150);
+  //   }, 75);
   // }
+
 
   render() {
     return (
       <div>
-        <div className="counter-container">
-          <div className="counter"><p>50</p></div>
-          <ProgressRing
-            radius={160}
-            stroke={10}
-            progress={this.state.progress}
-          />
-
-        </div>
+        <ProgressRing
+          radius={160}
+          stroke={10}
+          progress={this.state.progress}
+        />
       </div>
     );
   }
