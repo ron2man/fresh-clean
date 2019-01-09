@@ -18,6 +18,11 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
 .flex {
   display: flex;
 }

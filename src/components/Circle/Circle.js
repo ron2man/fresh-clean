@@ -53,7 +53,7 @@ class Example extends React.Component {
     super(props);
 
     this.state = {
-      progress: 0
+      progress: 0,
     };
 
     this.handleClick = this.handleClick.bind(this)
@@ -73,6 +73,7 @@ class Example extends React.Component {
 
   handleClick() {
     this.setState({ progress: 0 })
+    console.log(this.interval)
   }
   // componentDidMount() {
   //   const interval = setInterval(() => {
