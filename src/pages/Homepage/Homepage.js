@@ -5,13 +5,22 @@ import ShowTimeLeft from '../../components/ShowTimeLeft/ShowTimeLeft.js'
 import SelectDate from '../../components/SelectDate/SelectDate.js'
 import ThirdBox from '../../components/ThirdBox/ThirdBox.js'
 
+
 class Homepage extends React.Component {
+    constructor(props) {
+        super(props);
+        // Don't call this.setState() here!
+        this.state = {
+            startDate: null,
+        };
+    }
+
     render() {
         return <div className="boxes">
             <FirstBox />
             <ShowTimeLeft date="1545894000000" />
             {/* 27/12/2018  */}
-            <SelectDate />
+            {/* <SelectDate /> */}
             <ThirdBox quotes={quotes} />
         </div>;
     }
