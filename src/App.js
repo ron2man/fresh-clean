@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route, NavLink  } from 'react-router-dom'
 
 import Homepage from './pages/Homepage/Homepage'
 import Minute from './pages/Minute/Minute'
@@ -20,7 +20,7 @@ const Main = () => (
     <Switch>
       <Route exact path='/' component={Homepage} />
       {/* both /roster and /roster/:number begin with /roster */}
-      <Route path='/minute' component={Minute} />
+      <Route exact path='/minute' component={Minute} />
       <Route path='/schedule' component={Homepage} />
     </Switch>
   </main>
@@ -37,9 +37,9 @@ function Header() {
 
 function Footer() {
   return <footer className="flex space-around align-items-center">
-    <Link to='/'><div className="app-button active"><FontAwesomeIcon icon={faCircle} />בית</div></Link>
-    <Link to='/minute'><div className="app-button"><FontAwesomeIcon icon={faCommentDots} />קח דקה</div></Link>
-    <div className="app-button"><FontAwesomeIcon icon={faCommentDots} />לוח מחוונים</div>
+    <NavLink exact  to='/' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faCircle} />בית</div></NavLink >
+    <NavLink  to='/minute' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faCommentDots} />קח דקה</div></NavLink >
+    <NavLink  to='/about' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faCommentDots} />לוח</div></NavLink>
   </footer>;
 }
 

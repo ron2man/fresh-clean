@@ -7,6 +7,14 @@ import ThirdBox from '../../components/ThirdBox/ThirdBox.js'
 
 
 class Homepage extends React.Component {
+    constructor(props) {
+        super(props);
+        // Don't call this.setState() here!
+        this.state = {
+            startDate: null,
+        };
+    }
+
     render() {
         return <div className="boxes">
             <FirstBox />
