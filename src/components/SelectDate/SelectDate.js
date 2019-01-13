@@ -27,6 +27,7 @@ class SelectDate extends React.Component {
 
     handleChange(date) {
         console.log(this.state.startDate.getTime())
+        // this.props.handleChange(date)
         console.log(this.state.startDate)
         this.setState({ startDate: date, isSelectOpen: !this.state.isSelectOpen })
 

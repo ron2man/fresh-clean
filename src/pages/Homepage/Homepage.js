@@ -12,13 +12,20 @@ class Homepage extends React.Component {
         // Don't call this.setState() here!
         this.state = {
             startDate: null,
+            // startDate: 1545894000000,
         };
+        this.handleChange = this.handleChange.bind(this);
     }
+    handleChange(e) {
+        // this.setState({startDate: e.target.value});
+        console.log('hey')
+      }
 
     render() {
         return <div className="boxes">
             <FirstBox />
-            <ShowTimeLeft date="1545894000000" />
+            {this.state.startDate && <ShowTimeLeft date={this.state.startDate} />}
+            {!this.state.startDate && <SelectDate onChange={this.handleChange} />}
             {/* 27/12/2018  */}
             {/* <SelectDate /> */}
             <ThirdBox quotes={quotes} />

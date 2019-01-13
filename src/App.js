@@ -7,12 +7,12 @@ import Minute from './pages/Minute/Minute'
 // Font Awsome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEllipsisV, faCircle, faCommentDots } from '@fortawesome/free-solid-svg-icons'
+import { faEllipsisV, faHandHoldingUsd, faCommentDots, faHome, faStopwatch } from '@fortawesome/free-solid-svg-icons'
 
 
 import './App.css';
 
-library.add(faEllipsisV, faCircle, faCommentDots)
+library.add(faEllipsisV, faHandHoldingUsd, faCommentDots, faHome, faStopwatch)
 
 const Main = () => (
   <main>
@@ -37,9 +37,9 @@ function Header() {
 
 function Footer() {
   return <footer className="flex space-around align-items-center">
-    <NavLink exact  to='/' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faCircle} />בית</div></NavLink >
-    <NavLink  to='/minute' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faCommentDots} />קח דקה</div></NavLink >
-    <NavLink  to='/about' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faCommentDots} />לוח</div></NavLink>
+    <NavLink exact  to='/' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHome} />בית</div></NavLink >
+    <NavLink  to='/minute' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faStopwatch} />קח דקה</div></NavLink >
+    <NavLink  to='/about' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHandHoldingUsd} />כסף</div></NavLink>
   </footer>;
 }
 
