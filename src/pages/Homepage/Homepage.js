@@ -16,9 +16,9 @@ class Homepage extends React.Component {
         };
         this.handleChange = this.handleChange.bind(this);
     }
-    handleChange(e) {
-        // this.setState({startDate: e.target.value});
-        console.log('hey')
+    handleChange(timestamp) {
+        this.setState({startDate: timestamp});
+        console.log('hey',timestamp)
       }
 
     render() {

@@ -1,8 +1,13 @@
 .second-box {
+  /* font-size: 1.4em; */
     height: 90px;
     background-color: rgba(148, 77, 106, 0.048);
     margin-bottom: 10px;
   }
+
+.second-box svg {
+  padding: 0 10px;
+}
 
   .second-box input{
     display:none;

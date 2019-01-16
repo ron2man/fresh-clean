@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, NavLink  } from 'react-router-dom'
+import { Switch, Route, NavLink } from 'react-router-dom'
 
 import Homepage from './pages/Homepage/Homepage'
 import Minute from './pages/Minute/Minute'
@@ -27,21 +27,27 @@ const Main = () => (
 )
 
 
-
-function Header() {
-  return <header className="flex space-between align-items-center">
+const Header = () => (
+  <header className="flex space-between align-items-center">
     <h1 className="logo">So Fresh So Clean</h1>
     <FontAwesomeIcon icon={faEllipsisV} />
   </header>
-}
+)
 
-function Footer() {
-  return <footer className="flex space-around align-items-center">
-    <NavLink exact  to='/' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHome} />בית</div></NavLink >
-    <NavLink  to='/minute' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faStopwatch} />קח דקה</div></NavLink >
-    <NavLink  to='/about' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHandHoldingUsd} />כסף</div></NavLink>
-  </footer>;
-}
+const Footer = () => (
+  <footer className="flex space-around align-items-center">
+    <NavLink exact to='/' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHome} />Home</div></NavLink >
+    <NavLink to='/minute' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faStopwatch} />Minute</div></NavLink >
+    <NavLink to='/about' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHandHoldingUsd} />Save</div></NavLink>
+  </footer>
+)
+// function Footer() {
+//   return <footer className="flex space-around align-items-center">
+//     <NavLink exact to='/' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHome} />בית</div></NavLink >
+//     <NavLink to='/minute' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faStopwatch} />קח דקה</div></NavLink >
+//     <NavLink to='/about' activeStyle={{ color: 'black' }}><div className="app-button"><FontAwesomeIcon icon={faHandHoldingUsd} />כסף</div></NavLink>
+//   </footer>;
+// }
 
 
 
