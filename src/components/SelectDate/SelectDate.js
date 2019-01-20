@@ -22,10 +22,12 @@ class SelectDate extends React.Component {
         this.handleClick = this.handleClick.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
 
+
     }
 
     handleChange(date) {
         console.log(this.state.startDate.getTime())
+        this.props.onChange(date.getTime())
         console.log(this.state.startDate)
         this.setState({ startDate: date, isSelectOpen: !this.state.isSelectOpen })
 
@@ -46,14 +48,10 @@ class SelectDate extends React.Component {
         this.setState({ isSelectOpen: !this.state.isSelectOpen })
     }
 
-
-
-    componentDidMount() {
-
-    }
     render() {
         return <div className="box second-box flex space-evenly align-items-center" >
-            <div onClick={this.handleClick}><FontAwesomeIcon icon={faPlusCircle} />Select Date</div>
+            <div onClick={this.handleClick} >
+            <FontAwesomeIcon icon={faPlusCircle} />Select Date</div>
             {
                 this.state.isSelectOpen &&
                 <DatePicker
